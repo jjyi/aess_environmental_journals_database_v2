@@ -1,0 +1,52 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Journal #<%= @journal.id %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <dt>Journal name</dt>
+              <dd><%= @journal.journal_name %></dd>
+
+              <dt>Issues per yr</dt>
+              <dd><%= @journal.issues_per_yr %></dd>
+
+              <dt>Journal url</dt>
+              <dd><%= @journal.journal_url %></dd>
+
+              <dt>Content guide url</dt>
+              <dd><%= @journal.content_guide_url %></dd>
+
+              <dt>Topic</dt>
+              <dd><%= @journal.topic_id %></dd>
+
+              <dt>Admin</dt>
+              <dd><%= @journal.admin_id %></dd>
+
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <a href="/journals" class="btn btn-primary">
+                <i class="fa fa-chevron-left"></i>
+              </a>
+
+              <a href="/journals/<%= @journal.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+
+              <a href="/delete_journal/<%= @journal.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
