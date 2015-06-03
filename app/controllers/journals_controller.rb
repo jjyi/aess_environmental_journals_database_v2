@@ -1,6 +1,7 @@
 class JournalsController < ApplicationController
   def index
-    @journals = Journal.all
+    @q = Journal.ransack(params[:q])
+    @journals = @q.result(:distinct => true).includes(:topic)
   end
 
   def show

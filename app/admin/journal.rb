@@ -1,5 +1,4 @@
 ActiveAdmin.register Journal do
-
 permit_params :journal_name, :issues_per_yr,:journal_url,:content_guide_url,:topic_id
 
   # See permitted parameters documentation:
@@ -10,8 +9,8 @@ permit_params :journal_name, :issues_per_yr,:journal_url,:content_guide_url,:top
   # or
   #
   # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
+  #   permitted = [:journal_name, :issues_per_yr,:journal_url,:content_guide_url,:topic_id]
+  #   permitted << :journal_topic if topic.topic_id?
   #   permitted
   # end
 
